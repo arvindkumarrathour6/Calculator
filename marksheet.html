@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marksheet</title>
+</head>
+<body>
+<section class="feature-area section-gap" id="'service">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Marksheet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    {% csrf_token %}
+                    <label>Hindi</label>
+                    <input type="text" name="num1" class="form-control"/>
+                    <br>
+                    <label>English</label>
+                    <input type="text" name="num2" class="form-control"/>
+                    <br/>
+                    <label>Mathematics</label>
+                    <input type="text" name="num3" class="form-control"/>
+                    <br/>
+                    <label>Physics</label>
+                    <input type="text" name="num4" class="form-control"/>
+                    <br/>
+                    <label>Chemistry</label>
+                    <input type="text" name="num5" class="form-control"/>
+                    <br/>
+                    <button type="submit">Marksheet</button>
+                    <label>total</label>c
+                    <input type="text" value={{total}} class="form-control"/>
+                    <br>
+                    <label>per</label>
+                    <input type="text" value={{per}} class="form-control"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculater</title>
+</head>
+<body>
+<div class="title text-center">
+   <pre><h1 class="mb-10">                                      Calculater</h1>
+</pre>
+</div>
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <label>Value 1</label>
+            <input type="text" name="num1" class="form-control"/>
+            <br/>
+            <label>Select opr</label>
+            <select name="opr" class="form-control">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <br>
+
+            <label>Value 2</label>
+            <input type="text" name="num2" class="form-control"/>
+            <br>
+            <button type="submit">Calculator</button>
+            <label>Output</label>
+            <br>
+            <input type="text" value="{{c}}" class="form-control"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
